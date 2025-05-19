@@ -28,7 +28,7 @@ export default function FeatureCard({ icon, title, description, color, iconColor
     <div className={`${color} p-6 rounded-xl hover:scale-105 transition-transform duration-300`}>
       <div className="mb-4">{getIcon()}</div>
       <h3 className="text-xl font-semibold mb-2">{title}</h3>
-      <p className="text-gray-300 text-sm">{description}</p>
+      <p className="text-black text-sm">{description}</p>
     </div>
   )
 }

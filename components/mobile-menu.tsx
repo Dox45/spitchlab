@@ -14,7 +14,7 @@ export default function MobileMenu() {
 
   return (
     <div className="md:hidden">
-      <Button variant="ghost" size="icon" onClick={toggleMenu} className="text-white">
+      <Button variant="ghost" size="icon" onClick={toggleMenu} className="text-white bg-black">
         <Menu className="h-6 w-6" />
       </Button>
 

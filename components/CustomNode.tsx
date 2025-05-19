@@ -1,68 +1,3 @@
-// import React from 'react';
-// import { Handle, Position } from '@xyflow/react';
-
-// export default function CustomNode({ data }) {
-//   // const { label, inputs = 1, outputs = 1 } = data;
-//   const { label, description = '', inputs = 1, outputs = 1 } = data;
-
-
-//   return (
-//     <div
-//       style={{
-//         position: 'relative',
-//         padding: '12px',
-//         borderRadius: '8px',
-//         backgroundColor: 'black',
-//         border: '2px solid #4f46e5',
-//         color: 'white',
-//         fontWeight: 500,
-//         boxShadow: '0 2px 5px rgba(0,0,0,0.1)',
-//         minWidth: 160,
-//         textAlign: 'center',
-//       }}
-//     >
-//       {/* Label */}
-//       <div>{label}</div>
-//       <div style={{ fontSize: '12px', color: 'white' }}>{description}</div>
-
-
-//       {/* Input handles (left side) */}
-//       {[...Array(inputs)].map((_, i) => (
-//         <Handle
-//           key={`input-${i}`}
-//           type="target"
-//           position={Position.Left}
-//           id={`input-${i}`}
-//           style={{
-//             top: `${(i + 1) * 20}px`,
-//             background: '#000',
-//             width: '10px',
-//             height: '10px',
-//             borderRadius: '50%',
-//           }}
-//         />
-//       ))}
-
-//       {/* Output handles (right side) */}
-//       {[...Array(outputs)].map((_, i) => (
-//         <Handle
-//           key={`output-${i}`}
-//           type="source"
-//           position={Position.Right}
-//           id={`output-${i}`}
-//           style={{
-//             top: `${(i + 1) * 20}px`,
-//             background: '#555',
-//             width: '10px',
-//             height: '10px',
-//             borderRadius: '50%',
-//           }}
-//         />
-//       ))}
-//     </div>
-//   );
-// }
-
 
 // import React from 'react';
 // import { Handle, Position } from '@xyflow/react';
@@ -75,9 +10,9 @@
 //       style={{
 //         padding: 10,
 //         borderRadius: 8,
-//         background: '#f9f9f9',
+//         background: 'black',
 //         border: '2px solid #4f46e5',
-//         color: '#111',
+//         color: 'white',
 //         fontWeight: 500,
 //         boxShadow: '0 2px 5px rgba(0,0,0,0.1)',
 //         minWidth: 150,
@@ -86,22 +21,23 @@
 //       }}
 //     >
 //       <div>{label}</div>
-//       <div style={{ fontSize: '12px', color: '#555' }}>{description}</div>
+//       <div style={{ fontSize: '12px', color: 'white' }}>{description}</div>
 
-//       {/* One input (left) */}
+//       {/* Allow multiple connections to target and source handles via unique ids */}
 //       <Handle
 //         type="target"
+//         id="a"
 //         position={Position.Left}
-//         id="input"
-//         style={{ top: '50%', background: 'black' }}
+//         style={{ top: '40%', background: 'black' }}
+//         isConnectable={true}
 //       />
 
-//       {/* One output (right) */}
 //       <Handle
 //         type="source"
+//         id="b"
 //         position={Position.Right}
-//         id="output"
-//         style={{ top: '50%', background: '#555' }}
+//         style={{ top: '40%', background: '#10b981' }}
+//         isConnectable={true}
 //       />
 //     </div>
 //   );
@@ -117,26 +53,34 @@ export default function CustomNode({ data }) {
     <div
       style={{
         padding: 10,
-        borderRadius: 8,
+        borderRadius: 12,
         background: 'black',
         border: '2px solid #4f46e5',
         color: 'white',
         fontWeight: 500,
         boxShadow: '0 2px 5px rgba(0,0,0,0.1)',
+        maxWidth: 200,
         minWidth: 150,
-        textAlign: 'center',
-        position: 'relative',
+        wordWrap: 'break-word',
+        overflowWrap: 'break-word',
+        textAlign: 'left',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: 4,
       }}
     >
-      <div>{label}</div>
-      <div style={{ fontSize: '12px', color: 'white' }}>{description}</div>
+      <div style={{ fontSize: '14px', fontWeight: 'bold' }}>
+        {label}
+      </div>
+      {description && (
+        <div style={{ fontSize: '12px', color: '#d1d5db' }}>{description}</div>
+      )}
 
-      {/* Allow multiple connections to target and source handles via unique ids */}
       <Handle
         type="target"
         id="a"
         position={Position.Left}
-        style={{ top: '40%', background: 'black' }}
+        style={{ top: '50%', background: 'black', border: '2px solid #4f46e5' }}
         isConnectable={true}
       />
 
@@ -144,7 +88,7 @@ export default function CustomNode({ data }) {
         type="source"
         id="b"
         position={Position.Right}
-        style={{ top: '40%', background: '#10b981' }}
+        style={{ top: '50%', background: '#10b981', border: '2px solid #059669' }}
         isConnectable={true}
       />
     </div>
