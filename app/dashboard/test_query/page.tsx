@@ -25,7 +25,7 @@ export default function QueryTest() {
     try {
       if (!session) throw new Error("No active session");
       const token = await session.getToken();
-      const res = await fetch("http://localhost:8000/query", {
+      const res = await fetch("http://102.37.136.211:8000/query", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,
