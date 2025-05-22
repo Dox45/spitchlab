@@ -40,7 +40,7 @@ export default function ChatAssistant() {
       }
       const token = await session.getToken();
 
-      const res = await fetch("http://localhost:8000/generate", {
+      const res = await fetch("http://102.37.136.211:8000/generate", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,

@@ -57,10 +57,16 @@ export default function MobileMenu() {
             </Link>
 
             <div className="flex flex-col gap-4 mt-6 w-full">
+              <Link
+                href="/sign-in"
+                >
               <Button variant="ghost" className="w-full text-white hover:text-purple-400">
                 Login
               </Button>
+                </Link>
+              <Link href="/sign-up">
               <Button className="w-full bg-purple-600 hover:bg-purple-700">Signup</Button>
+                </Link>
             </div>
           </nav>
         </div>
