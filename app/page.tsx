@@ -159,11 +159,11 @@ export default function Home() {
             </p>
             <div className="flex gap-4 pt-4 justify-center">
             {/*<Link href="/dashboard">*/}
-            <Link href="https://omniform1.com/forms/v1/landingPage/673271b91d1247c5759ce7d4/682f8f437796c80649f865c0">
+            <Link href="/waitlist">
               <Button className="bg-[rgb(209,44,44)] hover:bg-[rgb(209,44,44)]">Get Started</Button>
               </Link>
               {/*<Link href="/sign-in">*/}
-              <Link href="https://omniform1.com/forms/v1/landingPage/673271b91d1247c5759ce7d4/682f8f437796c80649f865c0">
+              <Link href="/waitlist">
               {/*<Button variant="outline" className="border-[rgb(209,44,44)] text-[rgb(209,44,44)] bg-white">*/}
               <Button
                     variant="outline"
@@ -214,8 +214,8 @@ export default function Home() {
     />
     <FeatureCard
       icon="custom-voice"
-      title="Custom Voice"
-      description="Create your own unique AI voice that matches your brand identity perfectly."
+      title="Seamless Integration"
+      description="Seamlessly integrate your agent with multiple services such as CRM and HR softwares."
       color="bg-white text-black"
       iconColor="text-black"
     />
@@ -223,13 +223,13 @@ export default function Home() {
 
   <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 mt-16 mb-4">
     {/*<Link href="/dashboard">*/}
-  <Link href="https://omniform1.com/forms/v1/landingPage/673271b91d1247c5759ce7d4/682f8f437796c80649f865c0">
+  <Link href="/waitlist">
       <Button className="bg-[rgb(209,44,44)] hover:bg-[rgb(209,44,44)] text-white">
         Get Started
       </Button>
     </Link>
     {/*<Link href="/dashboard">*/}
-    <Link href="https://omniform1.com/forms/v1/landingPage/673271b91d1247c5759ce7d4/682f8f437796c80649f865c0">
+    <Link href="/waitlist">
       <Button
         variant="outline"
         className="border-white text-white bg-black hover:border-transparent"
