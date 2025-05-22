@@ -70,21 +70,21 @@ export default function Home() {
       </Link>
 
       <nav className="hidden md:flex items-center gap-6">
-        <Link href="/about" className="text-sm hover:text-[rgb(209,44,44)] transition-colors">
+        <Link href="#about" className="text-sm hover:text-[rgb(209,44,44)] transition-colors">
           About Us
         </Link>
-        <Link href="/pricing" className="text-sm hover:text-[rgb(209,44,44)] transition-colors">
+        <Link href="#pricing" className="text-sm hover:text-[rgb(209,44,44)] transition-colors">
           Pricing
         </Link>
-        <Link href="/blog" className="text-sm hover:text-[rgb(209,44,44)] transition-colors">
+        <Link href="#blog" className="text-sm hover:text-[rgb(209,44,44)] transition-colors">
           Blog
         </Link>
-        <Link href="/contact" className="text-sm hover:text-[rgb(209,44,44)] transition-colors">
+        <Link href="#contact" className="text-sm hover:text-[rgb(209,44,44)] transition-colors">
           Contact
         </Link>
       </nav>
 
-      <div className="hidden md:flex items-center gap-2">
+      {/*<div className="hidden md:flex items-center gap-2">
       <SignedOut>
         <SignInButton mode="modal" redirecturl="/dashboard">
           <Button variant="ghost" size="sm" className="text-white hover:text-[rgb(209,44,44)]">
@@ -100,7 +100,7 @@ export default function Home() {
         </SignedOut>
 
         {/* Display 'User' button and 'Dashboard' link if user is signed in */}
-        <SignedIn>
+        {/*<SignedIn>
           <Link href="/dashboard">
             <Button size="sm" className="bg-[rgb(209,44,44)] hover:bg-black">
               Workspace
@@ -110,7 +110,39 @@ export default function Home() {
           <UserButton />
         </SignedIn>
 
-      </div>
+      </div>*/}
+
+      <div className="hidden md:flex items-center gap-2">
+  {/*<SignedOut>
+    <SignInButton mode="modal" redirecturl="/dashboard">
+      <Button variant="ghost" size="sm" className="text-white hover:text-[rgb(209,44,44)]">
+        Login
+      </Button>
+    </SignInButton>*/}
+
+    {/* Disabled Signup Button */}
+    <div>
+      <Button
+        size="sm"
+        disabled
+        className="bg-[rgb(209,44,44)] opacity-50 cursor-not-allowed"
+      >
+        Signup
+      </Button>
+    </div>
+  {/*</SignedOut>*/}
+
+  {/*<SignedIn>
+    <Link href="/dashboard">
+      <Button size="sm" className="bg-[rgb(209,44,44)] hover:bg-black">
+        Workspace
+      </Button>
+    </Link>
+
+    <UserButton />
+  </SignedIn>*/}
+</div>
+
 
       <MobileMenu />
     </header>
@@ -126,17 +158,19 @@ export default function Home() {
               Build ultra-realistic AI voice agents that handle customer conversations - from outbound sales to 24/7 inbound support - all in one powerful platform.
             </p>
             <div className="flex gap-4 pt-4 justify-center">
-            <Link href="/dashboard">
+            {/*<Link href="/dashboard">*/}
+            <Link href="https://omniform1.com/forms/v1/landingPage/673271b91d1247c5759ce7d4/682f8f437796c80649f865c0">
               <Button className="bg-[rgb(209,44,44)] hover:bg-[rgb(209,44,44)]">Get Started</Button>
               </Link>
-              <Link href="/sign-in">
+              {/*<Link href="/sign-in">*/}
+              <Link href="https://omniform1.com/forms/v1/landingPage/673271b91d1247c5759ce7d4/682f8f437796c80649f865c0">
               {/*<Button variant="outline" className="border-[rgb(209,44,44)] text-[rgb(209,44,44)] bg-white">*/}
               <Button
                     variant="outline"
                     className="border-[rgb(209,44,44)] text-[rgb(209,44,44)] bg-white hover:border-transparent"
                   >
 
-               Try Demo
+               Join Waitlist
               </Button>
               </Link>
             </div>
@@ -160,14 +194,14 @@ export default function Home() {
     <FeatureCard
       icon="voice-inflection"
       title="Real time Calls"
-      description="Our AI agents handle calls in real-time with natural conversation flow and adaptive responses.."
+      description="AI agents handle calls in real-time with natural conversation flow and adaptive responses.."
       color="bg-white text-black"
       iconColor="text-black"
     />
     <FeatureCard
       icon="multi-voice"
       title="Simultaneous Calls"
-      description="Our AI agents can handle multiple calls seamlessly and efficiently all at once."
+      description="AI agents can handle multiple calls seamlessly and efficiently all at once."
       color="bg-white text-black"
       iconColor="text-black"
     />
@@ -188,111 +222,25 @@ export default function Home() {
   </div>
 
   <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 mt-16 mb-4">
-    <Link href="/dashboard">
+    {/*<Link href="/dashboard">*/}
+  <Link href="https://omniform1.com/forms/v1/landingPage/673271b91d1247c5759ce7d4/682f8f437796c80649f865c0">
       <Button className="bg-[rgb(209,44,44)] hover:bg-[rgb(209,44,44)] text-white">
         Get Started
       </Button>
     </Link>
-    <Link href="/dashboard">
+    {/*<Link href="/dashboard">*/}
+    <Link href="https://omniform1.com/forms/v1/landingPage/673271b91d1247c5759ce7d4/682f8f437796c80649f865c0">
       <Button
         variant="outline"
         className="border-white text-white bg-black hover:border-transparent"
       >
-        Try Demo
+        Join Waitlist
       </Button>
     </Link>
   </div>
 </section>
 
 
-      {/* Enhanced Projects Section */}
-      {/* <section className="container mx-auto px-4 py-16">
-        <div className="flex flex-col md:flex-row items-center gap-8 max-w-6xl mx-auto">
-         <div className="md:w-1/2 flex justify-center bg-black">
-                 <svg
-    width="280"
-    height="280"
-    viewBox="0 0 280 280"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    className="max-w-full h-auto"
-  >
-    <defs>
-      <radialGradient id="glow" cx="50%" cy="50%" r="50%">
-        <stop offset="0%" stopColor="#FFD700" stopOpacity="1" />
-        <stop offset="100%" stopColor="#B24444" stopOpacity="0" />
-      </radialGradient>
-      <linearGradient id="pulse" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stopColor="#B24444" />
-        <stop offset="100%" stopColor="#FFD700" />
-      </linearGradient>
-    </defs>
-    
-    <ellipse
-      cx="140"
-      cy="140"
-      rx="70"
-      ry="90"
-      fill="url(#glow)"
-      opacity="0.3"
-    />
-    
-    <g>
-      <AnimatedPath
-        d="M60,120 Q100,60 140,140 Q180,220 220,160"
-        delay={0}
-      />
-      <AnimatedPath
-        d="M80,200 Q120,120 140,140 Q160,160 200,80"
-        delay={0.3}
-      />
-      <AnimatedPath
-        d="M60,180 Q100,200 140,140 Q180,80 220,120"
-        delay={0.6}
-      />
-    </g>
-   
-    <circle className="synapse-node" cx="60" cy="120" r="8" fill="#FFD700">
-      <animate attributeName="r" values="8;12;8" dur="1.5s" repeatCount="indefinite" />
-    </circle>
-    <circle className="synapse-node" cx="220" cy="160" r="8" fill="#FFD700">
-      <animate attributeName="r" values="8;12;8" dur="1.5s" begin="0.3s" repeatCount="indefinite" />
-    </circle>
-    <circle className="synapse-node" cx="80" cy="200" r="8" fill="#FFD700">
-      <animate attributeName="r" values="8;12;8" dur="1.5s" begin="0.6s" repeatCount="indefinite" />
-    </circle>
-    <circle className="synapse-node" cx="200" cy="80" r="8" fill="#FFD700">
-      <animate attributeName="r" values="8;12;8" dur="1.5s" begin="0.9s" repeatCount="indefinite" />
-    </circle>
-    <circle className="synapse-node" cx="60" cy="180" r="8" fill="#FFD700">
-      <animate attributeName="r" values="8;12;8" dur="1.5s" begin="1.2s" repeatCount="indefinite" />
-    </circle>
-    <circle className="synapse-node" cx="220" cy="120" r="8" fill="#FFD700">
-      <animate attributeName="r" values="8;12;8" dur="1.5s" begin="1.5s" repeatCount="indefinite" />
-    </circle>
-  </svg>
-  
-</div>
-
-          <div className="md:w-1/2 space-y-6 text-center md:text-left">
-            <div className="inline-block px-3 py-1 bg-[rgb(209,44,44)] text-white text-sm rounded-full mb-2">
-              SPITCHLABS
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold">Enhance Your Customer Experience with 24/7 AI support</h2>
-            <p className="text-black">
-              Meet your AI-powered voice assistant designed for seamless, real-time conversations.
-              Our speech-to-speech AI listens, understands, and replies naturally—bridging the gap between human interaction and intelligent automation.
-              Whether it's customer support, personal help, or guided assistance, this voice-first assistant speaks your language and delivers instant, context-aware responses with lifelike clarity.
-            </p>
-
-            <FeatureList />
-
-            <div className="flex justify-center md:justify-start">
-              <Button className="bg-[rgb(209,44,44)] hover:bg-[rgb(209,44,44)] mt-4">EXPLORE MORE</Button>
-            </div>
-          </div>
-        </div>
-      </section> */}
 
       <section className="relative px-4 py-20 md:py-32 bg-gradient-to-br from-black via-zinc-900 to-black text-white overflow-hidden rounded-[12px] shadow-xl">
   <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
@@ -352,7 +300,7 @@ export default function Home() {
         Enhance Your Customer Experience with <br className="hidden md:block" /> 24/7 AI Support
       </h2>
       <p className="text-zinc-300 text-base md:text-lg">
-        Meet your AI-powered voice assistant designed for seamless, real-time conversations.
+        Create AI-powered voice assistant designed for seamless, real-time conversations.
         Our speech-to-speech AI listens, understands, and replies naturally—bridging the gap between human interaction and intelligent automation.
         Whether it's customer support or guided assistance, it delivers instant, context-aware responses with lifelike clarity.
       </p>
